@@ -1,0 +1,36 @@
+{
+  "name": "typeorm-one-to-one-cyclic-dependency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-migrations": "node_modules/.bin/tsc --project tsconfig.migrations-only.json",
+    "generate-migration": "node_modules/.bin/typeorm migration:generate",
+    "revert-migration": "node_modules/.bin/typeorm migration:revert",
+    "run-migrations": "node_modules/.bin/typeorm migration:run",
+    "start": "node build/src/app",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "node_modules/.bin/tsc",
+    "tslint": "node_modules/.bin/tslint --project ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IRCraziestTaxi/typeorm-one-to-one-cyclic-dependency.git"
+  },
+  "author": "IRCraziestTaxi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IRCraziestTaxi/typeorm-one-to-one-cyclic-dependency/issues"
+  },
+  "homepage": "https://github.com/IRCraziestTaxi/typeorm-one-to-one-cyclic-dependency#readme",
+  "devDependencies": {
+    "@types/node": "^12.0.10",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "ts-simple-nameof": "^1.1.0",
+    "typeorm": "^0.2.18",
+    "typeorm-linq-repository": "^1.0.0-alpha.21"
+  }
+}
