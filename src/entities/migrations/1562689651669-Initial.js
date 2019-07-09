@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-class Initial1562627959709 {
+class Initial1562689651669 {
     up(queryRunner) {
         return __awaiter(this, void 0, void 0, function* () {
             yield queryRunner.query(`CREATE TABLE "user_profile" ("email" character varying(100) NOT NULL, "name" character varying(100) NOT NULL, "userId" integer NOT NULL, CONSTRAINT "UQ_e336cc51b61c40b1b1731308aa5" UNIQUE ("email"), CONSTRAINT "REL_51cb79b5555effaf7d69ba1cff" UNIQUE ("userId"), CONSTRAINT "PK_51cb79b5555effaf7d69ba1cff9" PRIMARY KEY ("userId"))`);
@@ -24,4 +24,4 @@ class Initial1562627959709 {
         });
     }
 }
-exports.Initial1562627959709 = Initial1562627959709;
+exports.Initial1562689651669 = Initial1562689651669;

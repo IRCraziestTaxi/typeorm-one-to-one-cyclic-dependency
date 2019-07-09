@@ -17,6 +17,6 @@ export class UserProfile {
     })
     public user: User;
 
-    @PrimaryColumn({ nullable: false })
+    @PrimaryColumn()
     public userId: number;
 }
