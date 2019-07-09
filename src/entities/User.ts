@@ -6,9 +6,17 @@ export class User {
     @PrimaryGeneratedColumn()
     public id: number;
 
-    @OneToOne(() => UserProfile, { cascade: true, onDelete: "CASCADE" })
+    @OneToOne(() => UserProfile, {
+        cascade: true,
+        onDelete: "CASCADE",
+        primary: true
+    })
     public profile: UserProfile;
 
-    @Column({ length: 100, nullable: false, unique: true })
+    @Column({
+        length: 100,
+        nullable: false,
+        unique: true
+    })
     public username: string;
 }

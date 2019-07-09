@@ -4,19 +4,26 @@ import { User } from "./User";
 
 @Entity()
 export class UserProfile {
-    @Column({ length: 100, nullable: false, unique: true })
+    @Column({
+        length: 100,
+        nullable: false,
+        unique: true
+    })
     public email: string;
 
-    @Column({ length: 100, nullable: false })
+    @PrimaryColumn()
+    public id: number;
+
+    @Column({
+        length: 100,
+        nullable: false
+    })
     public name: string;
 
     @OneToOne(() => User)
     @JoinColumn({
-        name: nameof<UserProfile>(p => p.userId),
+        name: nameof<UserProfile>(p => p.id),
         referencedColumnName: nameof<User>(u => u.id)
     })
     public user: User;
-
-    @PrimaryColumn()
-    public userId: number;
 }
