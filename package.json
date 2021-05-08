@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "ts-simple-nameof": "^1.1.0",
-    "typeorm": "^0.2.18",
+    "typeorm": "^0.2.25",
     "typeorm-linq-repository": "^1.0.0-alpha.21"
   }
 }
